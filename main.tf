@@ -30,6 +30,7 @@ resource "google_container_node_pool" "this" {
   node_count = var.GKE_NUM_NODES
 
   node_config {
+    disk_size_gb = var.DISK_SIZE_GB
     machine_type = var.GKE_MACHINE_TYPE
   }
 }
